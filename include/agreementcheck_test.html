@@ -1,0 +1,120 @@
+<%
+Dim sSQL_resume_print
+Dim oRS_resume_print
+Dim m_addr
+Dim s_addr
+
+Dim sPageTitle
+Dim sPageKeyword
+Dim sPageDescription
+Dim sAddHead
+Dim sBodyAttribute
+
+sPageTitle = "履歴書・職務経歴書　コンビニ印刷"
+sPageKeyword = "転職,就職,仕事,採用"
+sPageDescription = "転職・就職のお役立ちサイト！転職情報の検索から履歴書登録まであなたの転職活動をフルサポート！"
+sAddHead = "<link rel=""stylesheet"" type=""text/css"" href=""/css/style_main.css"">"
+
+m_addr = MainMailAddress
+If ChkStr(m_addr) = "" Then
+	m_addr = PortableMailAddress
+Else
+	s_addr = PortableMailAddress
+End If
+
+Response.Write htmlHeader(CURRENTURL,sPageTitle,sPageKeyword,sPageDescription,sAddHead,False,False,False,True,sBodyAttribute)
+%>
+</head><body>
+<%
+Call NaviHeader(1)'0（トップ）1（求職者）2（企業）3（共有）%>
+<div id="page_navi">
+<%
+Response.Write DspTopicPath(G_USERTYPE, "履歴書・職務経歴書印刷", "resume_print.asp", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")'
+%>
+<h1 class="stitle">履歴書・職務経歴書　コンビニ印刷</h1></div>
+<image src="/img/conpri/banner_conpri01.jpg" alt="コンプリ" class="spSmart">
+<div class="content">
+
+
+<p style="font-size:14px; font-weight:bold; color:#CC0033;">
+規約をお読みになり同意ボタンを押してお進みください。<br>
+※同意後は、富士フイルムビジネスイノベーション株式会社のサイトに移動します。</p>
+<p style=" font-size:14px;">
+ネットプリントサービスは、富士フイルムビジネスイノベーション株式会社によって運営されています。<br />
+★あなたの写真やファイルを最寄のセブンーイレブン店頭のマルチコピー機からプリントできます！</p>
+	<p style="text-align:center; text-decoration:underline;"><a href="<%= HTTP_CURRENTURL %>conpri/help_netprint.asp" target="_blank">ネットプリントの操作説明はコチラ</a></p>
+</div>
+<!--
+<div align="center" class="content">
+<p style="font-size:14px;">ご利用方法</u>
+</div>
+<div style="padding-left:80px">
+	<ul>
+<li>携帯からコンプリ印刷機能を選び、必要な書類を選択､予約して下さい｡</li>
+<li>発行された8桁の予約番号を控えて下さい｡</li>
+<li>セブンーイレブンに設置されたマルチコピー機のタッチパネルで｢ﾈｯﾄプリント｣を選択して下さい｡</li>
+<li>画面上の案内に従って8桁の予約番号をタッチパネルで入力して下さい｡</li>
+<li>内容確認後､料金(白黒100円 ｶﾗｰ200円)を投入し､プリントボタンを押して下さい｡</li>
+<li>ｺﾋﾟｰ機からプリントｱｳﾄされます｡</li>
+	</ul>
+</div>
+-->
+<div class="line1"></div>
+
+<div align="center">
+<p style="font-weight:bold; font-size:18px; margin:10px;"><u>ご利用規約</u></p>
+<p><iframe src="/conpri/conpri_Terms_Use.asp" width="90%" height="300px"></iframe>
+<p style="font-size:16px; color:#CC0033; margin:10px;">※必ずお読みください</p>
+<br>
+
+<%
+'2015.06.02
+'ゼロックス新基板サービス移行対応
+Const menDateFrom = "20150704190000" '2015/07/04 19:00:00
+Const menDateTo   = "20150706110000" '2015/07/06 11:00:00
+
+Dim datenow
+datenow = now()
+datenow = Replace(datenow,"/","")
+datenow = Replace(datenow," ","")
+datenow = Replace(datenow,":","")
+'response.write datenow & "<br>"
+
+If menDateFrom < datenow AND datenow < menDateTo Then 'メンテナンス期間内の場合はメンテ文言を表示する
+%>
+    <p style="font-size:20px; color:#CC0033; margin:10px;">メンテナンス中です</p><br>
+    大変恐れ入りますが、以下の期間につきまして、<br>
+    サーバーメンテナンスのため、コンプリがご利用できません。<br><br>
+    2015年7月4日（土）19:00 ～ 2015年7月6日（月）11:00(予定)<br><br>
+    2015年7月6日（月）11:00以降は通常通りご利用頂けます。<br>
+<%
+Else
+%>
+
+    <p style="font-weight:bold; font-size:18px; margin:10px;">規約に同意しますか？</p>
+
+    <form action="https://www-s.printing.ne.jp/cgi-bin/500/xo.cgi" method="post">
+        <input type="hidden" name="user_id"    value="lis21">
+        <input type="hidden" name="group_id"   value="5011">
+        <input type="hidden" name="m_addr"     value="<%=m_addr%>">
+        <input type="hidden" name="s_addr"     value="<%=s_addr%>">
+        <input type="hidden" name="prop_flag"  value="0">
+        <input type="hidden" name="file_url"   value="https://www.shigotonavi.co.jp/conpri/infile/<%= defout %>">
+        <input type="hidden" name="file_name"  value="<%= defout %>">
+        <input type="hidden" name="return_url" value="http://www.shigotonavi.co.jp/index.asp">
+        <input type="hidden" name="col_mode"   value="<% if pictureflag="1" then Response.Write "0" Else Response.Write "2" End If %>">
+        <input type="hidden" name="code_num"   value="<%=Password%>">
+        <input type="hidden" name="char_type"  value="1">
+        <input type="hidden" name="keep_day"   value="3">
+        <input type="submit" value="同意する">
+    </form>
+<%
+End If  'メンテ画面処理
+%>
+
+</div>
+<%
+Call NaviSidemenu(1)
+Call NaviFooter()
+Response.Write htmlFooter("")
+%>

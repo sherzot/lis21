@@ -1,0 +1,79 @@
+<%@ Language=VBScript CodePage=932 %>
+<% Option Explicit %>
+<%
+'******************************************************************************
+'概　要：メール送信画面
+'備　考：
+'更　新：2024/05/17 LIS katayama 作成（旧シテムからの改修）
+'　　　：2008/03/13 LIS K.Kokubo メール送信時, 
+'　　　：2008/05/07 LIS K.Kokubo 求人票の閲覧可否をChkOrderDspで判定するように変更
+
+'　　　：2011/01/05 LIS K.Kokubo Basp.SendMail → SndMail
+'******************************************************************************
+%>
+
+<!-- #INCLUDE VIRTUAL="/include/commonfunc.asp" -->
+<html lang="jpn">
+	<head>
+		<meta charset="sjis">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メールテスト</title>
+	</head>
+<body>
+
+<%
+Const Cnt_MailServer = "172.16.1.39"
+Dim sTo
+Dim sFrom
+Dim sBody
+Dim sSubject
+dim sResult
+Dim susername
+Dim input1
+Dim input2
+Dim input3
+Dim input4
+Dim input5
+Dim input6
+Dim doui
+
+
+
+
+		''susername = Request.Form("username")
+		'メール送信処理
+		sTo = "mkatayama@lis21.co.jp" ''sReceiverMailAddress	'送信先メールアドレス
+		
+		sFrom = "lis@lis21.co.jp" ''Cnt_NaviMailAddress	'送信元メールアドレス
+		
+		'タイトル
+		sSubject = "リスHPテストメール" ''MAIL_FROM_STAFF_SUBJECT
+
+		'本文
+		'' sBody = "testmail: username= " & VbCrlf & susername
+		sBody = " 氏名= " & input-1 & vbCrLf  ''& "会社名= " &  company & VBCrlf
+		sBody = sBody &  " 会社名= " & input-2 & vbCrLf 
+		sBody = sBody &  " 都道府県= " & input-3 & VbCrLf
+		sBody = sBody &  " メール= " & input-4 & vbCrLf 
+'		sBody = sBody &  "電話= "　& input-5 & vbCrLf 
+		sBody = sBody &  "  動機== " & input-6 & vbCrLf 
+		sBody = sBody & " 個人情報の同意 =" & doui  & vbCrLf
+		 
+
+		 
+		 'Cnt_MailServer''Const Cnt_MailServer = "172.16.1.39"
+		sResult = SndMail(Cnt_MailServer, sTo, sFrom, sSubject, sBody, "")
+		 ''Response.Write "Result= " & sResult & "<br>"
+		 ''Response.Write "sBody= " & sBody & "<br>"
+		 If sResult=True Then
+		 	Response.Write "送信が完了しました。"
+		 else
+		 	Response.Write "送信が失敗しました。"
+		 End if
+		
+
+%>
+  
+	</body>
+</html>
+

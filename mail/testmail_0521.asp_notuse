@@ -1,0 +1,79 @@
+<%@ Language=VBScript CodePage=932 %>
+<% Option Explicit %>
+<%
+'******************************************************************************
+'概　要：メール送信画面
+'備　考：
+'更　新：2024/05/17 LIS katayama 作成（旧シテムからの改修）
+
+
+
+'******************************************************************************
+%>
+
+<!-- #INCLUDE VIRTUAL="/include/commonfunc.asp" -->
+<html lang="ja">
+	<head>
+		<meta charset="sjis">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メールテスト</title>
+	</head>
+<body>
+
+<%
+Const Cnt_MailServer = "172.16.1.39"
+Dim sTo
+Dim sFrom
+Dim sBody
+Dim sSubject
+dim sResult
+Dim susername
+Dim username
+Dim company
+Dim pref
+Dim email
+Dim mobile
+Dim douki
+username = Request.Form("name")
+company = Request.Form("company")
+pref = Request.Form("prefecture")
+email = Request.Form("email")
+mobileno  = Request.Form("mobile")
+doukitext = Request.Form("body")
+
+Response.Write "username= " & username & "<br>"
+Response.Write "company= " & company & "<br>"
+Response.Write "pref= " & pref & "<br>"
+Response.Write "email= " & email & "<br>"
+Response.Write "mobileno= " & mobileno & "<br>"
+Response.Write "doukitext= " & doukitext & "<br>"
+
+
+		''susername = Request.Form("username")
+		'メール送信処理
+		sTo = "mkatayama@lis21.co.jp" ''sReceiverMailAddress	'送信先メールアドレス
+		
+		sFrom = "lis@lis21.co.jp" ''Cnt_NaviMailAddress	'送信元メールアドレス
+		
+		'タイトル
+		sSubject = "リスHP問い合わせメール" ''MAIL_FROM_STAFF_SUBJECT
+
+		'本文
+		sBody = " 氏名= " & username ''& VBCrlf ''& "会社名= " &  company & VBCrlf
+		sBody = sBody &  " 会社名= " & company ''& VBCrlf
+		sBody = sBody &  " 都道府県= " & pref ''& VBCrlf
+		sBody = sBody &  " メール= " & email & VBCrlf
+		sBody = sBody &  "電話= "　& mobileno ''& VBCrlf
+		sBody = sBody &  "  動機== " & doukitext ''& VBCrlf
+		 
+		 'Cnt_MailServer''Const Cnt_MailServer = "172.16.1.39"
+		'sResult = SndMail(Cnt_MailServer, sTo, sFrom, sSubject, sBody, "")
+		 Response.Write "Result= " & sResult & "<br>"
+		 ''Response.Write "susername= " & susername & "<br>"
+		
+
+%>
+  Mail Snd 
+	</body>
+</html>
+
