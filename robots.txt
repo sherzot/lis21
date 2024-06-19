@@ -1,0 +1,8 @@
+Sitemap: http://www.lis21.co.jp/sitemap.xml
+
+User-agent:*
+Disallow:/include/
+Disallow:/config/
+
+User-Agent: BaiduSpider
+Disallow: /

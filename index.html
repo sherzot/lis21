@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<script  type="text/javascript">
+		if (location.protocol !== "https:") {
+		  location.replace("https:" + location.href.substring(location.protocol.length));
+		}	
+	</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/app.js"></script>
+    <script defer src="js/mobile.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/logo-small.svg" type="image/icon type">
+    <link rel="icon" href="images/logo-small.svg" type="image/icon type">
+    <title>リス株式会社</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-------------- navbar -------------------->
+        <div class="navbar">
+            <div class="top_nav">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="images/Web/Logo/Web/Desctop.svg" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <!-------------- mobile top_nav -------------------->
+            <div class="mobile_container">
+                <div class="topnav">
+                    <a href="./index.html" class="active">
+                        <img src="images/Mobile/Web/Logo/Phone.svg" alt="">
+                    </a>
+                    <!-- Navigation links (hidden by default) -->
+                    <div id="myLinks">
+                        <a href="./Company.html">会社情報</a>
+                        <a href="./Tokyo-branch.html">支社情報</a>
+                        <a href="./recruit-sale.html">採用情報</a>
+                        <a href="./Privacy-policy.html">個人情報保護方針</a>
+                        <a href="./Temporary-staffing.html">人材派遣</a>
+                        <a href="./Recruitment.html">人材紹介</a>
+                        <a href="./Introduction.html">紹介予定派遣</a>
+                        <a href="./Trainer.html">トレーナーの紹介</a>
+                        <a href="./q&a.html">Ｑ＆Ａ</a>
+                        <a href="./Dispatch.html">派遣</a>
+                        <a href="./Prelusion.html">紹介</a>
+                        <a href="./Schedule.html">紹介予定派遣</a>
+                        <a href="./inquiry.html">お問い合わせ</a>
+                    </div>
+                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <img src="./images/Mobile/Web/Menu.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-------------- mobile top_nav end ---------------->
+
+            <!-- navigation -->
+            <div class="navigation">
+                <div class="nav_left">
+                    <a href="./Company.html">会社情報</a>
+                    <a href="./Tokyo-branch.html">支社情報</a>
+                    <a href="./inquiry.html">お問い合わせ</a>
+                    <a href="./recruit-sale.html" class="home">
+                        <div class="home_text">採用情報</div>
+                    </a>
+                </div>
+                <div class="nav_right">
+                    <a href="./Privacy-policy.html">個人情報保護方針・取り扱い</a>
+                    <img src="images/Web/P-mark.svg" alt="">
+                </div>
+            </div>
+            <!-- navigation END -->
+
+            <!----- submenu  ----->
+            <nav class="submenu">
+                <ul class="submenu-links">
+                    <li class="submenu-dropdown">
+                        <a href="#">転職サポート</a>
+                        <div class="dropdown">
+                            <a href="./Temporary-staffing.html">人材派遣</a>
+                            <a href="./Recruitment.html">人材紹介</a>
+                            <a href="./Introduction.html">紹介予定派遣</a>
+                            <a href="./Trainer.html">トレーナーの紹介</a>
+                            <a href="./q&a.html">Ｑ＆Ａ</a>
+                        </div>
+                    </li>
+                    <li class="submenu-dropdown">
+                        <a href="#">人材サービス</a>
+                        <div class="dropdown">
+                            <a href="./Dispatch.html">派遣</a>
+                            <a href="./Prelusion.html">紹介</a>
+                            <a href="./Schedule.html">紹介予定派遣</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!----- submenu end ----->
+        </div>
+        <!--- navbar END -------------->
+        <!----- HEADER -->
+        <div class="header">
+            <div class="header-text">
+                <h7 class="topslide">しごとナビ</h7>
+                <h2>
+                    仕事が見つかる！履歴書が作れる！<br>就職サポートが受けられる！
+                </h2>
+                <a href="./recruit-sale.html" class="header-button">今すぐ見る</a>
+            </div>
+        </div>
+
+        <!-------------- mobile header ---------------->
+        <div class="mobile-header">
+            <div class="mobile-text">
+                <h6 class="mobileslide">しごとナビ</h6>
+                <h2>
+                    仕事が見つかる！履歴書が作れる！<br>就職サポートが受けられる！
+                </h2>
+            </div>
+        </div>
+
+        <!-------------- mobile header end ---------------->
+        <!-- LINK-SECTION ---->
+        <div class="link-section">
+            <a href="https://www.shigotonavi.co.jp/" class="link-item1">
+                <div class="link-item-text">しごとナビ</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+            <a href="https://www.a-rirekisyo.jp/" class="link-item2">
+                <div class="link-item-text">無料でかんたんに履歴書が作られる<br>しごとナビ＠履歴書</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+            <a href="./Job seekers.html" class="link-item3">
+                <div class="link-item-text">お仕事をお探しの求職者様</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+            <a href="./human resurs.html" class="link-item4">
+                <div class="link-item-text">人材をお探しの採用担当者様</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+        </div>
+        <!-------------- mobile link ---------------->
+        <div class="mobile">
+            <a href="https://www.shigotonavi.co.jp/" class="item1">
+                <div class="link-item-text">しごとナビ</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+            <a href="https://www.a-rirekisyo.jp/" class="item2">
+                <div class="link-item-text">無料でかんたんに履歴書が作られる<br>しごとナビ＠履歴書</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+            <a href="./Job seekers.html" class="item3">
+                <div class="link-item-text">お仕事をお探しの求職者様</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+            <a href="./human resurs.html" class="item4">
+                <div class="link-item-text">人材をお探しの採用担当者様</div>
+                <div class="link-item-icon"><img src="./images/Web/Arrow.svg" alt=""></div>
+            </a>
+        </div>
+        <!-------------- mobile link end ---------------->
+        <!-- PARTNERS -->
+        <div class="main-partners">
+            <span class="large-corporation">大手・優良企業への取引実績多数</span>
+        </div>
+
+        <div class="partners">
+            <div class="col"><img src="./images/lenovo.svg" alt=""></div>
+            <div class="col"><img src="./images/p&g.svg" alt=""></div>
+            <div class="col"><img src="./images/panasonic.svg" alt=""></div>
+            <div class="col"><img src="./images/asahi.svg" alt=""></div>
+            <div class="col"><img src="./images/siemens.svg" alt=""></div>
+            <div class="col"><img src="./images/sony.svg" alt=""></div>
+            <div class="col"><img src="./images/daikin.svg" alt=""></div>
+            <div class="col"><img src="./images/denso.svg" alt=""></div>
+            <div class="col"><img src="./images/docomo.svg" alt=""></div>
+            <div class="col"><img src="./images/cyberagent.svg" alt=""></div>
+            <div class="col"><img src="./images/murata.svg" alt=""></div>
+            <div class="col"><img src="./images/calbee.svg" alt=""></div>
+            <div class="col"><img src="./images/omron.svg" alt=""></div>
+            <div class="col"><img src="./images/kasei.svg" alt=""></div>
+            <div class="col"><img src="./images/toyota.svg" alt=""></div>
+            <div class="col"><img src="./images/nakamura.svg" alt=""></div>
+            <div class="col"><img src="./images/tokyo.svg" alt=""></div>
+            <div class="col"><img src="./images/fast.svg" alt=""></div>
+        </div>
+
+        <!-- CONTENT1 -->
+        <div class="content1">
+            <div class="main-content1">
+            </div>
+            <div class="main-content2">
+                <h1>しごとナビ</h1>
+                <p>
+                    2000年に求人ポータルサイト【しごとナビ】の開発に着手。<br>現在では110万人の登録者にご利用頂いております。あらゆる業界・
+                    職種・雇用形態に対応する全方位型求人サイトです。インターネットの特徴を生かし、日本全国での就職・転職希望の方に対応しております。
+                </p>
+                <a href="https://www.shigotonavi.co.jp/">今すぐ見る</a>
+            </div>
+        </div>
+        <!-- mobile-content -->
+        <div class="mobile-content">
+            <div class="mobile-image-content1">
+            </div>
+            <a href="https://www.shigotonavi.co.jp/">
+                <h1>しごとナビ</h1>
+                <p>
+                    2000年に求人ポータルサイト【しごとナビ】の<br>開発に着手。現在では110万人の登録者にご利用頂いております。あらゆる業界・
+                    職種・雇用形態に対応する全方位型求人サイトです。インターネットの特徴を生かし、日本全国での就職・転職希望の方に対応しております。
+                </p>
+            </a>
+        </div>
+        <!-- CONTENT2 -->
+        <div class="content2">
+            <div class="main-content3">
+                <h1>しごとナビ＠履歴書</h1>
+                <p>転職･就職･アルバイトなど「履歴書・職務経歴書」が必要になる場面は多く作成の手間がかります。「しごとナビ＠履歴書」では必要な項目を入力するだけで簡単に無料で履歴書・職務経歴書を作成するサービスを提供させていただいております。
+                </p>
+                <a href="https://www.a-rirekisyo.jp/">今すぐ見る</a>
+            </div>
+            <div class="main-content4">
+            </div>
+        </div>
+        <!-- mobile-content -->
+        <div class="mobile-content">
+            <div class="mobile-image-content2">
+            </div>
+            <a href="https://www.a-rirekisyo.jp/">
+                <h1>しごとナビ＠履歴書</h1>
+                <p>転職･就職･アルバイトなど「履歴書・職務経歴書」が必要になる場面は多く作成の手間がかります。「しごとナビ＠履歴書」では必要な項目を入力するだけで簡単に無料で履歴書・職務経歴書を作成するサービスを提供させていただいております。
+                </p>
+            </a>
+        </div>
+        <!-- INFO-SECTION -->
+        <div class="info">
+            <div class="main-info">
+                <div class="main-info-logo">
+                    <img src="./images/P-mark.svg" alt="P-mark">
+                </div>
+                <div class="main-info-title">
+                    プライバシーマーク
+                </div>
+                <div class="main-info-item">
+                    <p>Pマーク取得の継続において、</p>
+                    <p>感謝状をいただきました。</p>
+                </div>
+            </div>
+            <div class="main-info">
+                <div class="main-info-logo">
+                    <img src="./images/Logo-mark.svg" alt="card-image1">
+                </div>
+                <div class="main-info-title">
+                    リス株式会社
+                </div>
+                <div class="main-info-item">
+                    <p>リス株式会社は、昭和55年4月から</p>
+                    <p>人材派遣・人材紹介をインターネット求人サイト</p>
+                    <p>「しごとナビ」などを通じて行っています。</p>
+                </div>
+            </div>
+            <div class="main-info">
+                <div class="main-info-logo">
+                    <img src="./images/Logo-shigotonavi-mark.svg" alt="card-image2">
+                </div>
+                <div class="main-info-title">
+                    しごとナビ
+                </div>
+                <div class="main-info-item">
+                    <p>おかげさまで『しごとナビ』登録者が</p>
+                    <p>１００万人突破しました。</p>
+                </div>
+            </div>
+        </div>
+        <!-- mobile info -->
+        <div class="mobile-info">
+            <div class="info-intro">
+                <div class="info-logo">
+                    <img src="./images/P-mark.svg" alt="P-mark">
+                </div>
+                <div class="info-title">
+                    プライバシーマーク
+                </div>
+                <div class="info-item">
+                    <p>Pマーク取得の継続において、</p>
+                    <p>感謝状をいただきました。</p>
+                </div>
+            </div>
+            <div class="info-intro">
+                <div class="info-logo">
+                    <img src="./images/Mobile/Logo-mobile.svg" alt="card-image1">
+                </div>
+                <div class="info-title">
+                    リス株式会社
+                </div>
+                <div class="info-item">
+                    <p>リス株式会社は、昭和55年4月から</p>
+                    <p>人材派遣・人材紹介をインターネット求人サイト</p>
+                    <p>「しごとナビ」などを通じて行っています。</p>
+                </div>
+            </div>
+            <div class="info-intro">
+                <div class="info-logo">
+                    <img src="./images/Mobile/Navi-mobile.svg" alt="card-image2">
+                </div>
+                <div class="info-title">
+                    しごとナビ
+                </div>
+                <div class="info-item">
+                    <p>おかげさまで『しごとナビ』登録者が</p>
+                    <p>１００万人突破しました。</p>
+                </div>
+            </div>
+        </div>
+
+        <!---------------- Footer ------------------->
+        <footer>
+
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="./images/Company.svg" alt="company">
+                </div>
+
+                <div class="footer-content">
+                    <div class="vertical">
+                        <div class="title">リス株式会社</div>
+                        <div class="footer-item"><a href="./Company.html">会社情報</a></div>
+                        <div class="footer-item"><a href="Tokyo-branch.html">支社情報</a></div>
+                        <!--<div class="footer-item"><a href="./Topics.html">トピックス</a></div>-->
+                        <div class="footer-item"><a href="./Privacy-policy.html">個人情報保護</a></div>
+                        <div class="footer-item"><a href="./recruit-sale.html">採用情報</a></div>
+                        <div class="footer-item"><a href="./inquiry.html">お問い合せ</a></div>
+                    </div>
+                    <div class="vertical">
+                        <div class="title">転職サポート</div>
+                        <div class="footer-item"><a href="./Temporary-staffing.html">人材派遣</a></div>
+                        <div class="footer-item"><a href="./Recruitment.html">人材紹介</a></div>
+                        <div class="footer-item"><a href="./Introduction.html">紹介予定派遣</a></div>
+                        <div class="footer-item"><a href="./Trainer.html">トレーナーの紹介</a></div>
+                        <div class="footer-item"><a href="./q&a.html">Ｑ＆Ａ</a></div>
+                    </div>
+                    <div class="vertical">
+                        <div class="title">人材サービス</div>
+                        <div class="footer-item"><a href="./Dispatch.html">派遣</a></div>
+                        <div class="footer-item"><a href="./Prelusion.html">紹介</a></div>
+                        <div class="footer-item"><a href="./Schedule.html">紹介予定派遣</a></div>
+                    </div>
+                </div>
+
+                
+                <div class="copyright">Copyright(c) 2024 LIS co.,Ltd. All rights Reserved.</div>
+            </div>
+            <div class="footer-map">
+                <iframe title="myFrame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6481.103588769505!2d139.69093757604216!3d35.68803667258506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd3741a9df7%3A0x4fb5f8fb9f0a0195!2sShinjuku%20NS%20Building!5e0!3m2!1sen!2sjp!4v1715059757728!5m2!1sen!2sjp"
+                    width="786" height="250" style="border:0;" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+        </footer>
+        <!--------------- footer-mobile ----------------->
+        <div class="footer-mobile">
+            <h2>リス株式会社</h2>
+            <div class="copyright">Copyright(c) 2024 LIS co.,Ltd. All rights Reserved.</div>
+        </div>
+        <!--------------- Footer end ----------------->
+    </div>
+</body>
+
+</html>
